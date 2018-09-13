@@ -37,22 +37,22 @@ if [ $OS = "CentOS" ]; then
 elif [ $OS = "Ubuntu" ]; then 
 # Download and install packages for Ubuntu
 sudo apt-get update
-sudo apt-get install git vim texlive-full texmaker terminator gimp inkscape libreoffice alsa -y
+sudo apt-get install git vim curl texlive-full texmaker terminator gimp inkscape libreoffice alsa irssi quassel -y
 sudo snap install kubectl
 sudo snap install juju  
 sudo snap install slack
 sudo snap install helm 
 
-# Configure git
+# Configure git for my user. 
 git config --global user.name "calvinhartwell"
 git config --global user.email "calvin@calvinhartwell.com"
 
 # Download and configure up-to-date helm 
 # Download and configure Google Chrome
 # Download and configure Atom
+# Download and configure Visual Studio Code
 # Download and configure Opera
 # Download and configure NVIDIA drivers (if NVIDIA card present)
-# Setup the Azure CLI tool
 # Blacklist the regular driver if required. 
 
 # Change default pulseaudio/alsa sample rate and format in /etc/pulse/daemon.conf
@@ -72,3 +72,6 @@ fi
 # Copy SSH Key (if present) into correct folder.
 # Pull all my repos and put them into correct folder.
 mkdir $HOME/Source
+
+# Setup the Azure CLI tool for Azure juju provisioning
+curl -L https://aka.ms/InstallAzureCli | bash
