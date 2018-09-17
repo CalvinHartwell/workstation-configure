@@ -11,3 +11,4 @@ To automatically place the SSH key, put it in the same directory as the script a
 ``` 
  id_rsa  id_rsa.pub
 ```
+
